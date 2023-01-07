@@ -25,4 +25,4 @@ while True:                                                 # keep running loop 
         break
     print("Received data: ", data)
     conn.send(data)                     # echo
-    conn.close()
+    #conn.close()                       # automatically closes a connection without action from connecting system
