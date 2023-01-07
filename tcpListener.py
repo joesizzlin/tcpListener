@@ -4,9 +4,9 @@ import socket
 
 #Define variables to hold info for the TCP/IP address, listen port, 
 # buffer size of the data we want to capture from the connecting system.
-TCP_IP = "192.168.0.122"
-TCP_PORT = 6996
-BUFFER_SIZE = 100
+TCP_IP = "192.168.0.122"                                    # select ip address
+TCP_PORT = 6996                                             # select port
+BUFFER_SIZE = 100                                           # select buffer size
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)       # define the socket
 s.bind((TCP_IP, TCP_PORT))                                  # bind the socket to the IP address and port w/ variables
@@ -25,4 +25,4 @@ while True:                                                 # keep running loop 
         break
     print("Received data: ", data)
     conn.send(data)                     # echo
-    #conn.close()                       # automatically closes a connection without action from connecting system
+conn.close()                     
